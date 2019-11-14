@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_white_drawable">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="220dp"
+        app:cardBackgroundColor="@color/red"
+        android:elevation="4dp"
+        app:cardCornerRadius="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="15dp">
+
+            <RelativeLayout
+                android:id="@+id/rlFoodInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp">
+                    <TextView
+                        android:id="@+id/tvFoodDetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Food Order"
+                        android:textColor="@color/white"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/tvDistance"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvFoodDetail"
+                        android:layout_marginTop="5dp"
+                        android:text="2.4 Km "
+                        android:textColor="@color/white"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/tvTimeToDeliver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvFoodDetail"
+                        android:layout_toRightOf="@+id/tvDistance"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="10dp"
+                        android:text="35 mins to deliver "
+                        android:textColor="@color/white"
+                        android:textSize="18sp"/>
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="₹45"
+                        android:textColor="@color/white"
+                        android:textSize="30sp"
+                        android:layout_centerVertical="true"/>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rlCustomerInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_below="@+id/rlFoodInfo"
+                android:layout_centerVertical="true">
+
+                <ImageView
+                    android:id="@+id/imgUser"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginTop="5dp"
+                    android:src="@drawable/man"/>
+
+                <TextView
+                    android:id="@+id/tvCustomerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgUser"
+                    android:layout_marginLeft="10dp"
+                    android:text="Frank Kumar"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/tvCustomerAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/imgUser"
+                    android:layout_marginLeft="10dp"
+                    android:layout_below="@+id/tvCustomerName"
+                    android:text="Sector 30"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imgCall"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/ic_call"/>
+
+                <TextView
+                    android:id="@+id/tvCallUser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imgCall"
+                    android:text="Call User"
+                    android:textColor="@color/white"
+                    android:textSize="18sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="5dp"
+                    />
+            </RelativeLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvOrderDelivered"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:cardBackgroundColor="@color/greenn"
+        android:elevation="4dp"
+        app:cardCornerRadius="5dp">
+
+        <TextView
+            android:id="@+id/tvOrderDelivered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ORDER DELIVERED"
+            android:textColor="@color/white"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:padding="10dp"/>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

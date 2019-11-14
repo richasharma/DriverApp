@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <TextView
+        android:id="@+id/tvItemName"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@+id/tvItemQuantity"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="Item Name"
+        android:padding="5dp"
+        />
+
+    <TextView
+        android:id="@+id/tvItemQuantity"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_toLeftOf="@+id/tvItemPrice"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="4"
+        android:padding="5dp"
+        android:gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tvItemPrice"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:text="₹ 40"
+        android:padding="5dp"
+        android:gravity="center"
+        />
+
+</RelativeLayout>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rlRowPreviousOrder"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingTop="20dp">
+
+
+    <TextView
+        android:id="@+id/tvShopName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Om Sweets and Snacks"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:singleLine="true"/>
+    <TextView
+        android:id="@+id/tvTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="01:45 PM"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tvShopName"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:layout_centerVertical="true"/>
+
+    <TextView
+        android:id="@+id/tvAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/imgNext"
+        android:singleLine="true"
+        android:text="₹97"
+        android:textColor="@color/black"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/tvOrderStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@+id/imgNext"
+        android:text="Delivered"
+        android:layout_marginTop="5dp"
+        android:layout_below="@+id/tvAmount"
+        android:textColor="@color/greenn"
+        android:textSize="12sp"
+        android:singleLine="true"
+        android:layout_centerVertical="true"/>
+
+    <ImageView
+        android:id="@+id/imgNext"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/forward_right_black"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#a9a9a9"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_below="@+id/tvOrderStatus"/>
+
+
+</RelativeLayout>

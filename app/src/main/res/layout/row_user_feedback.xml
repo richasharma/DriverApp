@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:layout_marginBottom="5dp"
+    app:cardCornerRadius="5dp"
+    android:elevation="4dp"
+   >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.mikhaellopez.circularimageview.CircularImageView
+            android:id="@+id/ivReviewerImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:src="@drawable/profile"
+            app:civ_border_color="#3f51b5"
+            app:civ_border_width="4dp"
+            app:civ_shadow_color="#3f51b5"
+            android:scaleType="centerInside"/>
+
+        <RelativeLayout
+            android:id="@+id/rlReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ivReviewerImage"
+            android:layout_alignBottom="@+id/ivReviewerImage"
+            android:layout_toRightOf="@+id/ivReviewerImage"
+            android:padding="2dp">
+
+                <TextView
+                    android:id="@+id/tvReviewerName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:text="Frank Kumar"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tvStarRating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvReviewerName"
+                    android:layout_marginLeft="2dp"
+                    android:gravity="center_vertical"
+                    android:text=" |  5 stars"
+                    android:textSize="15sp"
+                    android:textColor="@color/black"
+                    android:drawableLeft="@drawable/star_border_black"/>
+                 <TextView
+                   android:id="@+id/tvReviewDate"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_alignParentRight="true"
+                   android:layout_marginRight="5dp"
+                   android:text="25 Aug 2019"
+                   android:textSize="15sp"
+                   android:textColor="@color/black"/>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvReview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rlReview"
+            android:layout_marginTop="5dp"
+            android:padding="5dp"
+            android:text="Lorem ipsum dolor"
+            android:textSize="15sp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

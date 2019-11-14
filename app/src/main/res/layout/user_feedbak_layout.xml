@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/red"
+    android:padding="10dp">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerReviews"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal"
+        android:visibility="gone"
+        app:indicatorColor="#ffffff"
+        app:indicatorName="BallPulseIndicator" />
+
+        <LinearLayout
+            android:id="@+id/llCalender"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingTop="10dp"
+            android:visibility="gone"
+            >
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp">
+
+                <TextView
+                    android:id="@+id/tvFrom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="FROM"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"
+                    />
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_below="@+id/tvFrom"
+                    card_view:cardCornerRadius="5dp"
+                    android:elevation="8dp">
+
+                    <TextView
+                        android:id="@+id/tvFromDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:padding="10dp"
+                        android:text="August 07, 2019"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:drawableRight="@drawable/date_range_black"/>
+                </androidx.cardview.widget.CardView>
+
+            </RelativeLayout>
+           <!-- <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight=".2"/>
+-->
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp">
+                <TextView
+                    android:id="@+id/tvLast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="LAST"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:gravity="center_vertical"/>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_below="@+id/tvLast"
+                    card_view:cardCornerRadius="5dp"
+                    android:elevation="4dp">
+                    <TextView
+                        android:id="@+id/tvLastDate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="10dp"
+                        android:text="August 07, 2019"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"
+                        android:gravity="center_vertical"
+                        android:drawableRight="@drawable/date_range_black"
+                        android:paddingRight="10dp"/>
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/llCalender"
+            card_view:cardCornerRadius="5dp"
+            android:elevation="4dp"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/tvTotalReviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp"
+                    android:text="513 Reviews"
+                    android:textSize="20sp"
+                    android:textColor="@color/white"/>
+
+                <LinearLayout
+                    android:id="@+id/llRatings"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:layout_below="@+id/tvTotalReviews"
+                    android:weightSum="5"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv5StarRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" |  5 stars"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/star_border_black"/>
+
+                        <TextView
+                            android:id="@+id/tv5StarReviews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv5StarRating"
+                            android:text="300 Reviews"
+                            android:textSize="8dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv4StarRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" |  4 stars"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/star_border_black"/>
+
+                        <TextView
+                            android:id="@+id/tv4StarReviews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv4StarRating"
+                            android:text="100 Reviews"
+                            android:textSize="8dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv3StarRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" |  3 stars"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/star_border_black"/>
+
+                        <TextView
+                            android:id="@+id/tv3StarReviews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv3StarRating"
+                            android:text="50 Reviews"
+                            android:textSize="8dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv2StarRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" |  2 stars"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/star_border_black"/>
+
+                        <TextView
+                            android:id="@+id/tv2StarReviews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv2StarRating"
+                            android:text="0 Reviews"
+                            android:textSize="8dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"/>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1">
+                        <TextView
+                            android:id="@+id/tv1StarRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=" |  1 stars"
+                            android:textSize="10dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_vertical"
+                            android:drawableLeft="@drawable/star_border_black"/>
+
+                        <TextView
+                            android:id="@+id/tv1StarReviews"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv1StarRating"
+                            android:text="63 Reviews"
+                            android:textSize="8dp"
+                            android:textColor="@color/black"
+                            android:layout_marginBottom="5dp"
+                            android:gravity="center_horizontal"/>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_below="@+id/llRatings"
+                    android:layout_margin="5dp"
+                    android:background="#a3a3a3"/>
+
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

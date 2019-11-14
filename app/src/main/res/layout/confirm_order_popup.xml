@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="300dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/rounded_white_drawable">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvInfo"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        app:cardBackgroundColor="@color/red"
+        android:elevation="4dp"
+        app:cardCornerRadius="5dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:id="@+id/tvFoodDetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Food Order"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvDistance"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFoodDetail"
+                android:layout_marginTop="5dp"
+                android:text="2.4 Km "
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvTimeToDeliver"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvFoodDetail"
+                android:layout_toRightOf="@+id/tvDistance"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:text="35 mins to Pick"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:text="₹45"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:gravity="center_vertical"/>
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:id="@+id/rlShopInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/cvInfo"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/restaurant"
+           />
+
+        <TextView
+            android:id="@+id/tvRestaurantName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img1"
+            android:text="Om Sweets and Snacks"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tvRestaurantAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvRestaurantName"
+            android:layout_toRightOf="@+id/img1"
+            android:text="Sector 4"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+           />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCustomerInfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/rlShopInfo"
+        android:layout_centerVertical="true">
+
+        <ImageView
+            android:id="@+id/img2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/gps"
+            />
+
+        <TextView
+            android:id="@+id/tvCustomerName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/img2"
+            android:text="Frank Kumar"
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+        <TextView
+            android:id="@+id/tvCustomerAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvCustomerName"
+            android:layout_toRightOf="@+id/img2"
+            android:text="Sector 30"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            />
+    </RelativeLayout>
+
+
+<!--<androidx.cardview.widget.CardView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    app:cardBackgroundColor="@color/greenn"
+    android:elevation="4dp"
+    app:cardCornerRadius="5dp"
+    >-->
+
+    <Button
+        android:id="@+id/tvPickOrder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/button_selector"
+        android:text="PICK ORDER"
+        android:textColor="@color/white"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:enabled="true"
+        android:padding="5dp"
+        />
+
+<!--
+</androidx.cardview.widget.CardView>-->
+
+</RelativeLayout>
